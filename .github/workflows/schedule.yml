@@ -21,4 +21,4 @@ jobs:
       - name: build remind
         run: mvn clean package -Dmaven.test.skip
       - name: run remind
-        run: java -jar -Dding_url=${{ secrets.DING_URL }} -Donly_work_day=${{ secrets.ONLY_WORK }} -Dwork_url=${{ secrets.WORK_URL }} -Dtest=${{ secrets.TEST }}  target/health-reminder-jar-with-dependencies.jar
+        run: java -jar -Dding_url=${{ secrets.DING_URL }} -Donly_work_day=${{ secrets.ONLY_WORK }} -Dwork_url='${{ secrets.WORK_URL }}' -Dtest=${{ secrets.TEST }}  target/health-reminder-jar-with-dependencies.jar
