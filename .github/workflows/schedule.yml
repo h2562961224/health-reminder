@@ -2,7 +2,7 @@ name: health remind
 
 on:
   schedule:
-    - cron: '0 30 9-18 * *'
+    - cron: '30 9-18 * * *'
 
 jobs:
   build:
