@@ -40,7 +40,6 @@ public class Main {
         String workUrl = System.getProperty("work_url");
         String test = System.getProperty("test");
         boolean isTest = "true".equals(test);
-        System.out.println(dingUrl);
         DingTalkClient client = new DefaultDingTalkClient(dingUrl);
         ZonedDateTime now = ZonedDateTime.now(ZoneId.of("Asia/Shanghai"));
         int chineseHour = now.getHour();
@@ -55,7 +54,7 @@ public class Main {
         if(Objects.equals(onlyWorkDays, "true")){
             String workDays = doGet(workUrl + now.format(DateTimeFormatter.ofPattern("yyyyMMdd")));
             JSONObject jsonObject =JSON.parseObject(workDays);
-            System.out.println(workDays);
+            System.out.println("test whether work days response:" + workDays);
             if("2".equals(jsonObject.getJSONObject("result").getString("workmk")) && !isTest){
                 return;
             }
