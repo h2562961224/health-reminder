@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    environment: TEST
+    env: TEST
     runs-on: ubuntu-latest
 
     steps:
