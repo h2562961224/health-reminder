@@ -2,7 +2,7 @@ name: health remind
 
 on:
   schedule:
-    - cron: '30 9-18 * * *'
+    - cron: '30 1-10 * * *'
   push:
     branches:
       - master
